@@ -13,6 +13,7 @@
 		B8138D202A37895F0012F56C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8138D1E2A37895F0012F56C /* Main.storyboard */; };
 		B8138D222A37895F0012F56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8138D212A37895F0012F56C /* Assets.xcassets */; };
 		B8138D252A37895F0012F56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8138D232A37895F0012F56C /* LaunchScreen.storyboard */; };
+		B82077622A378A0A0056563B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B82077612A378A0A0056563B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B8138D212A37895F0012F56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8138D242A37895F0012F56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8138D262A37895F0012F56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B82077612A378A0A0056563B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B8138D212A37895F0012F56C /* Assets.xcassets */,
 				B8138D232A37895F0012F56C /* LaunchScreen.storyboard */,
 				B8138D262A37895F0012F56C /* Info.plist */,
+				B82077612A378A0A0056563B /* GoogleService-Info.plist */,
 			);
 			path = FoodInfo;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8138D252A37895F0012F56C /* LaunchScreen.storyboard in Resources */,
+				B82077622A378A0A0056563B /* GoogleService-Info.plist in Resources */,
 				B8138D222A37895F0012F56C /* Assets.xcassets in Resources */,
 				B8138D202A37895F0012F56C /* Main.storyboard in Resources */,
 			);
