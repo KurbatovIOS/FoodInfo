@@ -7,13 +7,6 @@
 
 import Foundation
 
-//struct ParsingProduct {
-//    let code: String
-//    let title: String
-//    let ingredients: String
-//    let imageURL: String?
-//}
-
 struct Product {
     let code: String
     let title: String

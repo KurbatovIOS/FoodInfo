@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>613829212297-ccar97juhri9t6v448rts75ssb8pmik2.apps.googleusercontent.com</string>
+	<string>889305703258-eepeg49esu7dib31fg6ecd061v6bml5q.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.613829212297-ccar97juhri9t6v448rts75ssb8pmik2</string>
+	<string>com.googleusercontent.apps.889305703258-eepeg49esu7dib31fg6ecd061v6bml5q</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBhZFKGSoG7XeENl7zinZ2XmPy3FGLloao</string>
+	<string>AIzaSyCCHebXBZnJm0uVVyoozpOGGLdfj-EJBTA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>613829212297</string>
+	<string>889305703258</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.artkurbatov.FoodInfo</string>
 	<key>PROJECT_ID</key>
-	<string>foodscaner-39b75</string>
+	<string>foodinfo-53828</string>
 	<key>STORAGE_BUCKET</key>
-	<string>foodscaner-39b75.appspot.com</string>
+	<string>foodinfo-53828.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:613829212297:ios:cf2ec5eba62ceb9b736e58</string>
+	<string>1:889305703258:ios:3df5d33a635bdd49cec963</string>
 </dict>
 </plist>
