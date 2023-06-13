@@ -276,6 +276,51 @@
 			<key>uniqueIdentifier</key>
 			<string>1C7D209A-AF6B-479E-8743-4BF1B3429D1E</string>
 		</dict>
+		<key>2677CC86-0454-4E93-A435-A25E2DEF7179</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>C76B2527-0880-4702-81A6-17AB9D06F2E4</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-FoodInfo-2023.06.13_9-34-57-+0300.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374097.61140001</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>2677CC86-0454-4E93-A435-A25E2DEF7179</string>
+		</dict>
 		<key>2B81E7B6-4FCC-4C51-94F3-B52B9768A528</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
@@ -455,6 +500,51 @@
 			<string>Run FoodInfo</string>
 			<key>uniqueIdentifier</key>
 			<string>42FE12BC-FD78-462D-A8A3-7E774545F31E</string>
+		</dict>
+		<key>4E9E393E-EFCC-4C21-A5AE-14E64B31B5D8</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>4D68C6D6-7AF5-4190-BFAE-F0AA2CB487D9</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-FoodInfo-2023.06.13_9-39-48-+0300.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374388.57067502</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>4E9E393E-EFCC-4C21-A5AE-14E64B31B5D8</string>
 		</dict>
 		<key>507BDA6B-7AA9-4EC5-91F4-2DFA9C667181</key>
 		<dict>
@@ -1086,6 +1176,51 @@
 			<key>uniqueIdentifier</key>
 			<string>BE6D28FA-8137-407A-A45F-9CEF15F19335</string>
 		</dict>
+		<key>BF8D4E35-5531-4AE7-9783-D6B447F004D5</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>76B5148D-DD5D-4A7A-8162-531DE5DF6C11</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-FoodInfo-2023.06.13_9-42-32-+0300.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374552.36558402</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>BF8D4E35-5531-4AE7-9783-D6B447F004D5</string>
+		</dict>
 		<key>D5747D0E-16CA-49C8-A39B-74C1FBDE0D1D</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
@@ -1175,6 +1310,51 @@
 			<string>Run FoodInfo</string>
 			<key>uniqueIdentifier</key>
 			<string>D94AA825-7467-4234-B08D-00A637BDB069</string>
+		</dict>
+		<key>DE4EF72B-0373-4251-B063-E12BBEDBC6C0</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>E060CAF0-2739-415F-9C57-FFADED116CB2</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-FoodInfo-2023.06.13_9-43-15-+0300.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374595.79333103</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>DE4EF72B-0373-4251-B063-E12BBEDBC6C0</string>
 		</dict>
 		<key>E1F71311-F1EA-4832-9BED-75CF89D8C57B</key>
 		<dict>

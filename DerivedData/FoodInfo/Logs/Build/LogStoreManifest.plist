@@ -380,6 +380,40 @@
 			<key>uniqueIdentifier</key>
 			<string>3C10885A-C99A-48B5-80F5-8681DE3E8A17</string>
 		</dict>
+		<key>4D68C6D6-7AF5-4190-BFAE-F0AA2CB487D9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4D68C6D6-7AF5-4190-BFAE-F0AA2CB487D9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374388.57078803</real>
+			<key>timeStoppedRecording</key>
+			<real>708374390.399737</real>
+			<key>title</key>
+			<string>Build FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>4D68C6D6-7AF5-4190-BFAE-F0AA2CB487D9</string>
+		</dict>
 		<key>580BB4BC-70CB-4F23-B101-FE6ED263C55F</key>
 		<dict>
 			<key>className</key>
@@ -618,6 +652,40 @@
 			<key>uniqueIdentifier</key>
 			<string>76097575-99DE-4C8F-96AE-C37F704D18AC</string>
 		</dict>
+		<key>76B5148D-DD5D-4A7A-8162-531DE5DF6C11</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>76B5148D-DD5D-4A7A-8162-531DE5DF6C11.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374552.36564302</real>
+			<key>timeStoppedRecording</key>
+			<real>708374554.39329803</real>
+			<key>title</key>
+			<string>Build FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>76B5148D-DD5D-4A7A-8162-531DE5DF6C11</string>
+		</dict>
 		<key>77B35FF1-10B2-4A53-9664-C4A0D49B2887</key>
 		<dict>
 			<key>className</key>
@@ -821,6 +889,40 @@
 			<string>Build FoodInfo</string>
 			<key>uniqueIdentifier</key>
 			<string>A111BE2C-DA90-45CB-9C30-85A1177C98D3</string>
+		</dict>
+		<key>A75F91E7-9426-4C64-935F-9494AB01F843</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A75F91E7-9426-4C64-935F-9494AB01F843.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374372.20886004</real>
+			<key>timeStoppedRecording</key>
+			<real>708374374.35418701</real>
+			<key>title</key>
+			<string>Build FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>A75F91E7-9426-4C64-935F-9494AB01F843</string>
 		</dict>
 		<key>A8A6BE70-072A-4D5F-A8D0-6B6658D0C85D</key>
 		<dict>
@@ -1297,6 +1399,40 @@
 			<string>Build FoodInfo</string>
 			<key>uniqueIdentifier</key>
 			<string>DF0673E4-09BA-4AD2-B2DB-378B70225F29</string>
+		</dict>
+		<key>E060CAF0-2739-415F-9C57-FFADED116CB2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E060CAF0-2739-415F-9C57-FFADED116CB2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FoodInfo project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FoodInfo</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FoodInfo</string>
+			<key>timeStartedRecording</key>
+			<real>708374595.79345405</real>
+			<key>timeStoppedRecording</key>
+			<real>708374597.66497195</real>
+			<key>title</key>
+			<string>Build FoodInfo</string>
+			<key>uniqueIdentifier</key>
+			<string>E060CAF0-2739-415F-9C57-FFADED116CB2</string>
 		</dict>
 		<key>E30BA9E1-E2E6-4747-976D-FB44B351C613</key>
 		<dict>

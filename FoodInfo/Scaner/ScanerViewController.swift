@@ -49,8 +49,7 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }()
     
     private lazy var codeTextFieldTop = NSLayoutConstraint(item: codeTextField, attribute: .top, relatedBy: .equal, toItem: restartButton, attribute: .bottom, multiplier: 1, constant: 20)
-    
-//    private lazy var searchButtondTop = NSLayoutConstraint(item: searchButton, attribute: .top, relatedBy: .equal, toItem: codeTextField, attribute: .bottom, multiplier: 1, constant: 20)
+
     private lazy var isKeyboardShown = false
     
     var captureSession: AVCaptureSession!
@@ -68,12 +67,18 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         presenter.delegate = self
         codeTextField.delegate = self
-        view.backgroundColor = .systemBackground
         setConstraints()
         setupObserver()
+        addTapGesture()
        }
+    
+    private func addTapGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(screenDidTap))
+        view.addGestureRecognizer(gesture)
+    }
     
     private func setupObserver() {
         NotificationCenter.default.addObserver(
@@ -223,24 +228,28 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         presenter.findProduct(with: code)
     }
     
-    @objc func keyboardWillShow(_ notification: NSNotification) {
+    @objc private func screenDidTap() {
+        view.endEditing(true)
+    }
+    
+    @objc private func keyboardWillShow(_ notification: NSNotification) {
         if !isKeyboardShown {
             showKeyboard()
             isKeyboardShown = true
         }
        }
        
-       @objc func keyboardWillHide(_ notification: NSNotification) {
+       @objc private func keyboardWillHide(_ notification: NSNotification) {
            hideKeyboard()
            isKeyboardShown = false
        }
        
-       func showKeyboard() {
+    private func showKeyboard() {
            codeTextFieldTop.constant -= 130
            self.view.layoutIfNeeded()
        }
     
-    func hideKeyboard() {
+    private func hideKeyboard() {
         codeTextFieldTop.constant = 20
         self.view.layoutIfNeeded()
     }
