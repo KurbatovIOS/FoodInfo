@@ -8,10 +8,9 @@
 import Foundation
 
 struct Product {
-    let code: String
     let title: String
     let ingredients: String
-    let imageURL: String?
+    let imageName: String?
 }
 
 

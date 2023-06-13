@@ -14,6 +14,7 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Введите код"
+        textField.keyboardType = .numberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -47,14 +48,45 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         return view
     }()
     
+    private lazy var codeTextFieldTop = NSLayoutConstraint(item: codeTextField, attribute: .top, relatedBy: .equal, toItem: restartButton, attribute: .bottom, multiplier: 1, constant: 20)
+    
+//    private lazy var searchButtondTop = NSLayoutConstraint(item: searchButton, attribute: .top, relatedBy: .equal, toItem: codeTextField, attribute: .bottom, multiplier: 1, constant: 20)
+    private lazy var isKeyboardShown = false
+    
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    var presenter: ScanerPresenterProtocol
     
+    init(presenter: ScanerPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        presenter.delegate = self
+        codeTextField.delegate = self
         view.backgroundColor = .systemBackground
         setConstraints()
+        setupObserver()
+       }
+    
+    private func setupObserver() {
+        NotificationCenter.default.addObserver(
+                  self,
+                  selector: #selector(self.keyboardWillShow),
+                  name: UIResponder.keyboardWillShowNotification,
+                  object: nil)
+
+              NotificationCenter.default.addObserver(
+                  self,
+                  selector: #selector(self.keyboardWillHide),
+                  name: UIResponder.keyboardWillHideNotification,
+                  object: nil)
     }
     
     private func setConstraints() {
@@ -74,7 +106,7 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             restartButton.widthAnchor.constraint(equalToConstant: 50),
             restartButton.heightAnchor.constraint(equalTo: restartButton.widthAnchor),
             
-            codeTextField.topAnchor.constraint(equalTo: restartButton.bottomAnchor, constant: 20),
+            codeTextFieldTop,
             codeTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             codeTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             codeTextField.heightAnchor.constraint(equalToConstant: 50),
@@ -171,12 +203,9 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     func found(code: String) {
-        print(code)
-        let product = Product(code: UUID().uuidString, title: "Маффин Три шоколада «Русская нива»", ingredients: "Сахар, масло растительное подсолнечное, продукт яичный, вода питьевая, мука пшеничная хлебопекарная высшего сорта, начинка кремовая шоколадная нетермостабильная (сироп глюкозно-фруктозный, вода питьевая, сахар, шоколад (какао тертое, сахар, масло какао, молочный жир, эмульгатор - лецитин подсолнечника, ароматизатор), масло растительное кокосовое, сыворотка сухая молочная подсырная, стабилизатор Е1442, какао-порошок, консервант - сорбат калия, регулятор кислотности - лимонная кислота, ароматизатор), глицерин, какао-порошок алкализованный, шоколад белый (сахар, сухое цельное молоко, масло какао, сухое обезжиренное молоко, эмульгатор - лецитин соевый, ароматизатор), глазурь шоколадная молочная (сахар, сухое цельное молоко, масло какао, какао тертое, сухая молочная сыворотка, сухое обезжиренное молоко, лецитин соевый, ароматизатор), дрожжи хлебопекарные сухие дезактивированные, соль, загуститель Е1422", imageURL: nil)
-        let detailsVC = DetailsViewController(productToDisplay: product, dumbImageName: "maffin")
-        present(detailsVC, animated: true)
+        presenter.findProduct(with: code)
     }
-    
+
     @objc private func restartButtonDidTap() {
         if (captureSession?.isRunning == false) {
             DispatchQueue.global(qos: .userInteractive).async { [weak self] in
@@ -186,7 +215,63 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     @objc private func searchButtonDidTap() {
-        let requestVC = AddRequestViewController()
-        present(requestVC, animated: true)
+        view.endEditing(true)
+        guard let code = codeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            // TODO: Show Alert
+            return
+        }
+        presenter.findProduct(with: code)
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        if !isKeyboardShown {
+            showKeyboard()
+            isKeyboardShown = true
+        }
+       }
+       
+       @objc func keyboardWillHide(_ notification: NSNotification) {
+           hideKeyboard()
+           isKeyboardShown = false
+       }
+       
+       func showKeyboard() {
+           codeTextFieldTop.constant -= 130
+           self.view.layoutIfNeeded()
+       }
+    
+    func hideKeyboard() {
+        codeTextFieldTop.constant = 20
+        self.view.layoutIfNeeded()
+    }
+}
+
+extension ScanerViewController: ScanerPresenterDelegate {
+    func productReceived(_ product: Product) {
+        presenter.loadImage(for: product) { [weak self] imageData in
+            guard let imageData else { return }
+            let detailsVC = DetailsViewController(productToDisplay: product, imageData: imageData)
+            self?.present(detailsVC, animated: true)
+        }
+    }
+    
+    func showWarningAlert(_ code: String) {
+        let alert = UIAlertController(title: "Продукт не найден", message: "Вы можете оставить запрос на его добавление", preferredStyle: .alert)
+        let addAction = UIAlertAction(title: "Продолжить", style: .cancel) { _ in
+            let presenter = AddRequestPresenter()
+            let requestVC = AddRequestViewController(presenter: presenter, code: code)
+            self.present(requestVC, animated: true)
+        }
+        let cancel = UIAlertAction(title: "Отменить", style: .default)
+        alert.addAction(addAction)
+        alert.addAction(cancel)
+        self.present(alert, animated: true)
+    }
+}
+
+extension ScanerViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }

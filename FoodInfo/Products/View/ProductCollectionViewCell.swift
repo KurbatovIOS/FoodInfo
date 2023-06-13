@@ -43,12 +43,14 @@ class ProductCollectionViewCell: UICollectionViewCell {
         productTitleLabel.text = nil
     }
     
-    func configure(with product: Product, and imageName: String) {
-        productImageView.image = UIImage(named: imageName)
-//        if let imageData = product.imageData {
-//            productImageView.image = UIImage(data: imageData)
-//        }
+    func configure(with product: Product) {
         productTitleLabel.text = product.title
+    }
+    
+    func setImage(_ image: Data?) {
+        if let imageData = image {
+            productImageView.image = UIImage(data: imageData)
+        }
     }
     
     private func setConstraints() {

@@ -11,9 +11,11 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let productPresenter = ProductPresenter()
+        let scanerPresenter = ScanerPresenter()
         
-        let collectionVC = TabManager.createTab(rootVC: ProductsListViewController(), title: "Продукты", iconName: "fork.knife")
-        let scanerVC = TabManager.createTab(rootVC: ScanerViewController(), title: "Сканер", iconName: "barcode.viewfinder")
+        let collectionVC = TabManager.createTab(rootVC: ProductsListViewController(presenter: productPresenter), title: "Продукты", iconName: "cart")
+        let scanerVC = TabManager.createTab(rootVC: ScanerViewController(presenter: scanerPresenter), title: "Сканер", iconName: "barcode.viewfinder")
         let profileVC = TabManager.createTab(rootVC:  ProfileViewController(), title: "Категории", iconName: "list.dash")
     
         setViewControllers([collectionVC, scanerVC, profileVC], animated: true)

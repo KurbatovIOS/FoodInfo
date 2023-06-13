@@ -13,7 +13,9 @@ class AddRequestViewController: UIViewController {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.keyboardType = .numberPad
         textField.placeholder = "Код товара"
+        textField.text = self.code
         return textField
     }()
     
@@ -51,6 +53,18 @@ class AddRequestViewController: UIViewController {
         return button
     }()
     
+    private var presenter: AddRequestPresenterProtocol
+    private let code: String
+    
+    init(presenter: AddRequestPresenterProtocol, code: String) {
+        self.presenter = presenter
+        self.code = code
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +93,7 @@ class AddRequestViewController: UIViewController {
             ingredientsTextView.topAnchor.constraint(equalTo: titleTextField.bottomAnchor, constant: 10),
             ingredientsTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             ingredientsTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            ingredientsTextView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
+            ingredientsTextView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3),
             
             sendButton.topAnchor.constraint(equalTo: ingredientsTextView.bottomAnchor, constant: 10),
             sendButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -90,6 +104,14 @@ class AddRequestViewController: UIViewController {
     
     @objc private func sendButtonDidTap() {
         ingredientsTextView.endEditing(true)
+        presenter.addProductRequest(code: codeTextField.text, title: titleTextField.text, ingredients: ingredientsTextView.text) { [weak self] isSuccess in
+            self?.dismiss(animated: true)
+//            if isSuccess {
+//
+//            } else {
+//                self?.dismiss(animated: true)
+//            }
+        }
     }
 }
 

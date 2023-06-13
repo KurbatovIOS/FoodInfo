@@ -10,4 +10,6 @@ import Foundation
 class Identifiers {
     static let categoriesCell = "categoriesCell"
     static let productCell = "productCell"
+    static let productsCollection = "products"
+    static let productsToReviewCollection = "productsToReview"
 }

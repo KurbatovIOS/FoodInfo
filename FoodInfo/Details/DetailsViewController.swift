@@ -10,7 +10,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     private let productToDisplay: Product
-    private let dumbImageName: String
+    private let imageData: Data
     
     private lazy var productImageView: UIImageView = {
         let imageView = UIImageView()
@@ -64,9 +64,9 @@ class DetailsViewController: UIViewController {
         configureView()
     }
     
-    init(productToDisplay: Product, dumbImageName: String) {
+    init(productToDisplay: Product, imageData: Data) {
         self.productToDisplay = productToDisplay
-        self.dumbImageName = dumbImageName
+        self.imageData = imageData
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -78,7 +78,7 @@ class DetailsViewController: UIViewController {
         // productImageView.image = UIImage(data: productToDisplay.imageData)
         productTitleLabel.text = productToDisplay.title
         productDescriptionLabel.text = productToDisplay.ingredients
-        productImageView.image = UIImage(named: dumbImageName)
+        productImageView.image = UIImage(data: imageData)
         highlightIngredients(productToDisplay.ingredients)
     }
     
