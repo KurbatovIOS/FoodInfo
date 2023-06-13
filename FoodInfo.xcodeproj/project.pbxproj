@@ -157,19 +157,19 @@
 		B8591DCA2A37907A006049A4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B8591DCB2A37907A006049A4 /* ViewModels */,
+				B8591DCB2A37907A006049A4 /* Presenter */,
 				B8591DCD2A37907A006049A4 /* Models */,
 				B8591DCE2A37907A006049A4 /* Views */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		B8591DCB2A37907A006049A4 /* ViewModels */ = {
+		B8591DCB2A37907A006049A4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				B8591DCC2A37907A006049A4 /* ProfileViewModel.swift */,
 			);
-			path = ViewModels;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B8591DCD2A37907A006049A4 /* Models */ = {

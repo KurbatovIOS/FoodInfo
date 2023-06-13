@@ -20,6 +20,17 @@ class ProfileViewController: UIViewController {
         return tableView
     }()
     
+    private var presenter: ProfilePresenterProtocol
+    private var sections: [[String]] = Array(repeating: [], count: 3)
+    
+    init(presenter: ProfilePresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +44,6 @@ class ProfileViewController: UIViewController {
         sections[0].append("Шоколад")
         sections[1].append("Орех")
     }
-    
-    private let profileModel = ProfileViewModel()
-    private var sections: [[String]] = Array(repeating: [], count: 3)
     
     // MARK: - Constraints
     private func setConstraints() {
@@ -99,7 +107,7 @@ class ProfileViewController: UIViewController {
     
     
     @objc private func addToSectionDidTap(sender: UIButton) {
-        profileModel.addProductToSection("123", &sections[sender.tag])
+        presenter.addProductToSection("123", &sections[sender.tag])
         categoriesTableView.reloadData()
     }
     
