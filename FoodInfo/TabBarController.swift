@@ -11,9 +11,10 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let coreDataService = CoreDataService()
         let productPresenter = ProductPresenter()
         let scanerPresenter = ScanerPresenter()
-        let profilePresenter = ProfilePresenter()
+        let profilePresenter = ProfilePresenter(coreDataService: coreDataService)
         
         let collectionVC = TabManager.createTab(rootVC: ProductsListViewController(presenter: productPresenter), title: "Продукты", iconName: "cart")
         let scanerVC = TabManager.createTab(rootVC: ScanerViewController(presenter: scanerPresenter), title: "Сканер", iconName: "barcode.viewfinder")

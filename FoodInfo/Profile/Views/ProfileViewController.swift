@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
     }()
     
     private var presenter: ProfilePresenterProtocol
+    private var products: Set<String> = []
     private var sections: [[String]] = Array(repeating: [], count: 3)
     
     init(presenter: ProfilePresenterProtocol) {
@@ -40,9 +41,7 @@ class ProfileViewController: UIViewController {
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
         setConstraints()
-        
-        sections[0].append("Шоколад")
-        sections[1].append("Орех")
+        loadCategories()
     }
     
     // MARK: - Constraints
@@ -55,6 +54,18 @@ class ProfileViewController: UIViewController {
             categoriesTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -5),
             categoriesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+    
+    private func loadCategories() {
+        sections = presenter.loadCategories()
+        DispatchQueue.global().async {
+            for section in self.sections {
+                for product in section {
+                    self.products.insert(product)
+                }
+            }
+        }
+        categoriesTableView.reloadData()
     }
     
     private func setupHeader(for section: Int) -> UIView {
@@ -105,14 +116,34 @@ class ProfileViewController: UIViewController {
         //return backgroundView
     }
     
-    
     @objc private func addToSectionDidTap(sender: UIButton) {
-        presenter.addProductToSection("123", &sections[sender.tag])
-        categoriesTableView.reloadData()
+        let alert = UIAlertController(title: "Добавить продукт", message: "Введите название продукта", preferredStyle: .alert)
+        alert.addTextField()
+        let addAction = UIAlertAction(title: "Добавить", style: .cancel, handler: { _ in
+            guard let productName = alert.textFields?.first?.text, !productName.isEmpty else {
+                return
+            }
+            self.addProduct(productName, sender.tag)
+        })
+        let cancel = UIAlertAction(title: "Отменить", style: .default)
+        alert.addAction(addAction)
+        alert.addAction(cancel)
+        present(alert, animated: true)
+    }
+    
+    private func addProduct(_ productName: String, _ sectionTag: Int) {
+        if !products.contains(productName) {
+            let category = sections[sectionTag]
+            let sectionName = presenter.getCategoryName(sectionTag)
+            let newSection = presenter.addProductToSection(productName, category, sectionName)
+            sections[sectionTag] = newSection
+            categoriesTableView.reloadData()
+        }
     }
     
     @objc private func clearButtonDidTap(sender: UIButton) {
         sections[sender.tag].removeAll()
+        presenter.clearCategory(sender.tag)
         categoriesTableView.reloadData()
     }
 }

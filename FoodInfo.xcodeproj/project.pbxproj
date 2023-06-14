@@ -12,13 +12,15 @@
 		B8138D222A37895F0012F56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8138D212A37895F0012F56C /* Assets.xcassets */; };
 		B8138D252A37895F0012F56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8138D232A37895F0012F56C /* LaunchScreen.storyboard */; };
 		B8182B5B2A37935700B987A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8182B5A2A37935700B987A0 /* GoogleService-Info.plist */; };
+		B822E2142A39BED700285E7E /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B822E2132A39BED700285E7E /* CategoryService.swift */; };
+		B822E2162A39C90900285E7E /* SectionNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B822E2152A39C90900285E7E /* SectionNames.swift */; };
 		B8591DC12A378FEC006049A4 /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC02A378FEC006049A4 /* AddRequestViewController.swift */; };
 		B8591DC52A379068006049A4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC42A379068006049A4 /* TabBarController.swift */; };
 		B8591DD32A37907A006049A4 /* ScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC72A37907A006049A4 /* ScanerViewController.swift */; };
 		B8591DD42A37907A006049A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC92A37907A006049A4 /* DetailsViewController.swift */; };
-		B8591DD52A37907A006049A4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DCC2A37907A006049A4 /* ProfileViewModel.swift */; };
+		B8591DD52A37907A006049A4 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DCC2A37907A006049A4 /* ProfilePresenter.swift */; };
 		B8591DD62A37907A006049A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DCF2A37907A006049A4 /* ProfileViewController.swift */; };
-		B8591DD72A37907A006049A4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DD12A37907A006049A4 /* DataService.swift */; };
+		B8591DD72A37907A006049A4 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DD12A37907A006049A4 /* CoreDataService.swift */; };
 		B8591DD82A37907A006049A4 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DD22A37907A006049A4 /* FirebaseService.swift */; };
 		B8591DDD2A379082006049A4 /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DDA2A379082006049A4 /* ProductsListViewController.swift */; };
 		B8591DDE2A379082006049A4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DDB2A379082006049A4 /* Product.swift */; };
@@ -28,6 +30,7 @@
 		B8C1B2DC2A387D6E00ECA3F9 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DB2A387D6E00ECA3F9 /* ProductPresenter.swift */; };
 		B8C1B2DE2A3897D300ECA3F9 /* AddRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DD2A3897D300ECA3F9 /* AddRequestPresenter.swift */; };
 		B8C1B2E02A38988E00ECA3F9 /* ScanerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DF2A38988E00ECA3F9 /* ScanerPresenter.swift */; };
+		B8F0C5292A39062200540068 /* Categories.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8F0C5272A39062200540068 /* Categories.xcdatamodeld */; };
 		C6978D562358150DD4D59E12 /* Pods_FoodInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18827C58A53CD7AF807329B7 /* Pods_FoodInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,13 +44,15 @@
 		B8138D212A37895F0012F56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8138D242A37895F0012F56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8182B5A2A37935700B987A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B822E2132A39BED700285E7E /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		B822E2152A39C90900285E7E /* SectionNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionNames.swift; sourceTree = "<group>"; };
 		B8591DC02A378FEC006049A4 /* AddRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
 		B8591DC42A379068006049A4 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8591DC72A37907A006049A4 /* ScanerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanerViewController.swift; sourceTree = "<group>"; };
 		B8591DC92A37907A006049A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		B8591DCC2A37907A006049A4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		B8591DCC2A37907A006049A4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		B8591DCF2A37907A006049A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B8591DD12A37907A006049A4 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B8591DD12A37907A006049A4 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		B8591DD22A37907A006049A4 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B8591DDA2A379082006049A4 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
 		B8591DDB2A379082006049A4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		B8C1B2DB2A387D6E00ECA3F9 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
 		B8C1B2DD2A3897D300ECA3F9 /* AddRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestPresenter.swift; sourceTree = "<group>"; };
 		B8C1B2DF2A38988E00ECA3F9 /* ScanerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanerPresenter.swift; sourceTree = "<group>"; };
+		B8F0C5282A39062200540068 /* Categories.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Categories.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 				B8182B5A2A37935700B987A0 /* GoogleService-Info.plist */,
 				B8591DE52A3790C5006049A4 /* Info.plist */,
 				B8138D232A37895F0012F56C /* LaunchScreen.storyboard */,
+				B8F0C5272A39062200540068 /* Categories.xcdatamodeld */,
 			);
 			path = FoodInfo;
 			sourceTree = "<group>";
@@ -157,9 +164,9 @@
 		B8591DCA2A37907A006049A4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B8591DCE2A37907A006049A4 /* Views */,
 				B8591DCB2A37907A006049A4 /* Presenter */,
 				B8591DCD2A37907A006049A4 /* Models */,
-				B8591DCE2A37907A006049A4 /* Views */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -167,7 +174,7 @@
 		B8591DCB2A37907A006049A4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B8591DCC2A37907A006049A4 /* ProfileViewModel.swift */,
+				B8591DCC2A37907A006049A4 /* ProfilePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -190,7 +197,8 @@
 		B8591DD02A37907A006049A4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B8591DD12A37907A006049A4 /* DataService.swift */,
+				B822E2132A39BED700285E7E /* CategoryService.swift */,
+				B8591DD12A37907A006049A4 /* CoreDataService.swift */,
 				B8591DD22A37907A006049A4 /* FirebaseService.swift */,
 			);
 			path = Services;
@@ -211,6 +219,7 @@
 			children = (
 				B8591DE12A37908E006049A4 /* Identifiers.swift */,
 				B8591DE22A37908E006049A4 /* TabManager.swift */,
+				B822E2152A39C90900285E7E /* SectionNames.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -355,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8591DD72A37907A006049A4 /* DataService.swift in Sources */,
+				B8591DD72A37907A006049A4 /* CoreDataService.swift in Sources */,
 				B8138D192A37895F0012F56C /* AppDelegate.swift in Sources */,
 				B8591DC12A378FEC006049A4 /* AddRequestViewController.swift in Sources */,
 				B8591DC52A379068006049A4 /* TabBarController.swift in Sources */,
@@ -363,16 +372,19 @@
 				B8591DE42A37908E006049A4 /* TabManager.swift in Sources */,
 				B8591DDD2A379082006049A4 /* ProductsListViewController.swift in Sources */,
 				B8591DDE2A379082006049A4 /* Product.swift in Sources */,
+				B822E2162A39C90900285E7E /* SectionNames.swift in Sources */,
 				B8591DDF2A379082006049A4 /* ProductCollectionViewCell.swift in Sources */,
 				B8138D1B2A37895F0012F56C /* SceneDelegate.swift in Sources */,
 				B8C1B2DC2A387D6E00ECA3F9 /* ProductPresenter.swift in Sources */,
 				B8591DD32A37907A006049A4 /* ScanerViewController.swift in Sources */,
 				B8591DD82A37907A006049A4 /* FirebaseService.swift in Sources */,
+				B8F0C5292A39062200540068 /* Categories.xcdatamodeld in Sources */,
 				B8591DD42A37907A006049A4 /* DetailsViewController.swift in Sources */,
 				B8C1B2E02A38988E00ECA3F9 /* ScanerPresenter.swift in Sources */,
 				B8591DD62A37907A006049A4 /* ProfileViewController.swift in Sources */,
 				B8C1B2DE2A3897D300ECA3F9 /* AddRequestPresenter.swift in Sources */,
-				B8591DD52A37907A006049A4 /* ProfileViewModel.swift in Sources */,
+				B8591DD52A37907A006049A4 /* ProfilePresenter.swift in Sources */,
+				B822E2142A39BED700285E7E /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +596,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8F0C5272A39062200540068 /* Categories.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8F0C5282A39062200540068 /* Categories.xcdatamodel */,
+			);
+			currentVersion = B8F0C5282A39062200540068 /* Categories.xcdatamodel */;
+			path = Categories.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B8138D0D2A37895F0012F56C /* Project object */;
 }

@@ -18,7 +18,7 @@ protocol ProductPresenterProtocol {
 }
 
 class ProductPresenter: ProductPresenterProtocol {
-    var delegate: ProductPresenterDelegate?
+    weak var delegate: ProductPresenterDelegate?
     
     func getProducts() {
         FirebaseService.shared.getProducts(from: Identifiers.productsCollection) { products in

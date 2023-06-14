@@ -20,7 +20,7 @@ protocol ScanerPresenterProtocol {
 
 class ScanerPresenter: ScanerPresenterProtocol {
     
-    var delegate: ScanerPresenterDelegate?
+    weak var delegate: ScanerPresenterDelegate?
     
     func findProduct(with code: String) {
         guard !code.isEmpty else {
