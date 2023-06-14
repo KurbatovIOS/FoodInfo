@@ -9,9 +9,6 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    private let productToDisplay: Product
-    private let imageData: Data
-    
     private lazy var productImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -57,6 +54,10 @@ class DetailsViewController: UIViewController {
         return view
     }()
     
+    private let presenter: DetailsPresenterProtocol
+    private let productToDisplay: Product
+    private let imageData: Data
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -64,9 +65,10 @@ class DetailsViewController: UIViewController {
         configureView()
     }
     
-    init(productToDisplay: Product, imageData: Data) {
+    init(productToDisplay: Product, imageData: Data, presenter: DetailsPresenterProtocol) {
         self.productToDisplay = productToDisplay
         self.imageData = imageData
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -75,26 +77,11 @@ class DetailsViewController: UIViewController {
     }
     
     private func configureView() {
-        // productImageView.image = UIImage(data: productToDisplay.imageData)
         productTitleLabel.text = productToDisplay.title
         productDescriptionLabel.text = productToDisplay.ingredients
         productImageView.image = UIImage(data: imageData)
-        highlightIngredients(productToDisplay.ingredients)
-    }
-    
-    private func highlightIngredients(_ text: String) {
-        let ingredients = text.split(separator: ",")
-        var mutableAttributedString = NSMutableAttributedString.init(string: text)
-        for ingredient in ingredients {
-            defineColor(of: String(ingredient), in: text, &mutableAttributedString)
-        }
-        productDescriptionLabel.attributedText = mutableAttributedString
-    }
-    private func defineColor(of textToColor: String, in text: String, _ mutableAttributedString: inout NSMutableAttributedString) {
-        if textToColor.contains("орех") {
-            let range = (text as NSString).range(of: textToColor)
-            mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: range)
-        }
+        let attributedText = presenter.highlightIngredients(productToDisplay.ingredients)
+        productDescriptionLabel.attributedText = attributedText
     }
     
     private func setConstraints() {

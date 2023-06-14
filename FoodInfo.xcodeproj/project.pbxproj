@@ -14,6 +14,7 @@
 		B8182B5B2A37935700B987A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8182B5A2A37935700B987A0 /* GoogleService-Info.plist */; };
 		B822E2142A39BED700285E7E /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B822E2132A39BED700285E7E /* CategoryService.swift */; };
 		B822E2162A39C90900285E7E /* SectionNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B822E2152A39C90900285E7E /* SectionNames.swift */; };
+		B822E2182A3A27CB00285E7E /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B822E2172A3A27CB00285E7E /* DetailPresenter.swift */; };
 		B8591DC12A378FEC006049A4 /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC02A378FEC006049A4 /* AddRequestViewController.swift */; };
 		B8591DC52A379068006049A4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC42A379068006049A4 /* TabBarController.swift */; };
 		B8591DD32A37907A006049A4 /* ScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC72A37907A006049A4 /* ScanerViewController.swift */; };
@@ -46,6 +47,7 @@
 		B8182B5A2A37935700B987A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B822E2132A39BED700285E7E /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		B822E2152A39C90900285E7E /* SectionNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionNames.swift; sourceTree = "<group>"; };
+		B822E2172A3A27CB00285E7E /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		B8591DC02A378FEC006049A4 /* AddRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
 		B8591DC42A379068006049A4 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8591DC72A37907A006049A4 /* ScanerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanerViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B8591DC92A37907A006049A4 /* DetailsViewController.swift */,
+				B822E2172A3A27CB00285E7E /* DetailPresenter.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				B8591DD32A37907A006049A4 /* ScanerViewController.swift in Sources */,
 				B8591DD82A37907A006049A4 /* FirebaseService.swift in Sources */,
 				B8F0C5292A39062200540068 /* Categories.xcdatamodeld in Sources */,
+				B822E2182A3A27CB00285E7E /* DetailPresenter.swift in Sources */,
 				B8591DD42A37907A006049A4 /* DetailsViewController.swift in Sources */,
 				B8C1B2E02A38988E00ECA3F9 /* ScanerPresenter.swift in Sources */,
 				B8591DD62A37907A006049A4 /* ProfileViewController.swift in Sources */,

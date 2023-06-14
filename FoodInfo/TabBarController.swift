@@ -16,8 +16,8 @@ class TabBarController: UITabBarController {
         let scanerPresenter = ScanerPresenter()
         let profilePresenter = ProfilePresenter(coreDataService: coreDataService)
         
-        let collectionVC = TabManager.createTab(rootVC: ProductsListViewController(presenter: productPresenter), title: "Продукты", iconName: "cart")
-        let scanerVC = TabManager.createTab(rootVC: ScanerViewController(presenter: scanerPresenter), title: "Сканер", iconName: "barcode.viewfinder")
+        let collectionVC = TabManager.createTab(rootVC: ProductsListViewController(presenter: productPresenter, coreDataService: coreDataService), title: "Продукты", iconName: "cart")
+        let scanerVC = TabManager.createTab(rootVC: ScanerViewController(presenter: scanerPresenter, coreDataService: coreDataService), title: "Сканер", iconName: "barcode.viewfinder")
         let profileVC = TabManager.createTab(rootVC:  ProfileViewController(presenter: profilePresenter), title: "Категории", iconName: "list.dash")
     
         setViewControllers([collectionVC, scanerVC, profileVC], animated: true)

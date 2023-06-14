@@ -26,9 +26,11 @@ class ProductsListViewController: UIViewController {
     private lazy var filteredProducts: [Product] = []
     private lazy var products: [Product] = []
     private var presenter: ProductPresenterProtocol
+    private let coreDataService: CoreDataServiceProtocol
     
-    init(presenter: ProductPresenterProtocol) {
+    init(presenter: ProductPresenterProtocol, coreDataService: CoreDataServiceProtocol) {
         self.presenter = presenter
+        self.coreDataService = coreDataService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -115,7 +117,8 @@ extension ProductsListViewController: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let image = imageData[indexPath.row] {
-            let detailsVC = DetailsViewController(productToDisplay: filteredProducts[indexPath.row], imageData: image)
+            let presenter = DetailsPresenter(coreDataService: coreDataService)
+            let detailsVC = DetailsViewController(productToDisplay: filteredProducts[indexPath.row], imageData: image, presenter: presenter)
             present(detailsVC, animated: true)
         }
     }

@@ -52,12 +52,14 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
     private lazy var isKeyboardShown = false
     
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
-    var presenter: ScanerPresenterProtocol
+    private var captureSession: AVCaptureSession!
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    private var presenter: ScanerPresenterProtocol
+    private let coreDataService: CoreDataServiceProtocol
     
-    init(presenter: ScanerPresenterProtocol) {
+    init(presenter: ScanerPresenterProtocol, coreDataService: CoreDataServiceProtocol) {
         self.presenter = presenter
+        self.coreDataService = coreDataService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -258,9 +260,10 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 extension ScanerViewController: ScanerPresenterDelegate {
     func productReceived(_ product: Product) {
         presenter.loadImage(for: product) { [weak self] imageData in
-            guard let imageData else { return }
-            let detailsVC = DetailsViewController(productToDisplay: product, imageData: imageData)
-            self?.present(detailsVC, animated: true)
+            guard let imageData, let self else { return }
+            let presenter = DetailsPresenter(coreDataService: self.coreDataService)
+            let detailsVC = DetailsViewController(productToDisplay: product, imageData: imageData, presenter: presenter)
+            self.present(detailsVC, animated: true)
         }
     }
     
