@@ -11,6 +11,7 @@ protocol ProfilePresenterProtocol {
     func addProductToSection(_ prodocut: String, _ section: [String], _ sectionName: String) -> [String]
     func loadCategories() -> [[String]]
     func clearCategory(_ categoryTag: Int)
+    func deleteProduct(_ productName: String)
     func getCategoryName(_ categoryTag: Int) -> String
 }
 
@@ -31,6 +32,10 @@ class ProfilePresenter: ProfilePresenterProtocol {
     
     func loadCategories() -> [[String]] {
         coreDataService.loadCategories()
+    }
+    
+    func deleteProduct(_ productName: String) {
+        coreDataService.deleteProduct(productName)
     }
     
     func clearCategory(_ categoryTag: Int) {
