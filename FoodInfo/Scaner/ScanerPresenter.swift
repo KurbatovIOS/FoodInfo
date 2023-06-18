@@ -37,7 +37,6 @@ class ScanerPresenter: ScanerPresenterProtocol {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         sourceVC.present(alert, animated: true)
-        
     }
     
     func loadImage(for product: Product, complition: @escaping (Data?) -> Void) {

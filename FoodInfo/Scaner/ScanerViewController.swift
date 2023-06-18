@@ -201,14 +201,10 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
-            guard let stringValue = readableObject.stringValue else { return }
+            guard let productCode = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
+            presenter.findProduct(with: productCode)
         }
-    }
-    
-    func found(code: String) {
-        presenter.findProduct(with: code)
     }
 
     @objc private func restartButtonDidTap() {
@@ -222,7 +218,8 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     @objc private func searchButtonDidTap() {
         view.endEditing(true)
         guard let code = codeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !code.isEmpty else {
-            presenter.showWarningAlert(title: "Ошибка", message: "Поле ввода не может быть пустым", sourceVC: self)
+            let alert = AlertService.shared.createWarningAlert(title: "Ошибка", message: "Поле ввода не может быть пустым")
+            self.present(alert, animated: true)
             return
         }
         presenter.findProduct(with: code)

@@ -28,6 +28,7 @@
 		B8591DDF2A379082006049A4 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DDC2A379082006049A4 /* ProductCollectionViewCell.swift */; };
 		B8591DE32A37908E006049A4 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DE12A37908E006049A4 /* Identifiers.swift */; };
 		B8591DE42A37908E006049A4 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DE22A37908E006049A4 /* TabManager.swift */; };
+		B8B1A07E2A3F6C18005D2B7C /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B1A07D2A3F6C18005D2B7C /* AlertService.swift */; };
 		B8C1B2DC2A387D6E00ECA3F9 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DB2A387D6E00ECA3F9 /* ProductPresenter.swift */; };
 		B8C1B2DE2A3897D300ECA3F9 /* AddRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DD2A3897D300ECA3F9 /* AddRequestPresenter.swift */; };
 		B8C1B2E02A38988E00ECA3F9 /* ScanerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DF2A38988E00ECA3F9 /* ScanerPresenter.swift */; };
@@ -62,6 +63,7 @@
 		B8591DE12A37908E006049A4 /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		B8591DE22A37908E006049A4 /* TabManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabManager.swift; sourceTree = "<group>"; };
 		B8591DE52A3790C5006049A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8B1A07D2A3F6C18005D2B7C /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		B8C1B2DB2A387D6E00ECA3F9 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
 		B8C1B2DD2A3897D300ECA3F9 /* AddRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestPresenter.swift; sourceTree = "<group>"; };
 		B8C1B2DF2A38988E00ECA3F9 /* ScanerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanerPresenter.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				B822E2132A39BED700285E7E /* CategoryService.swift */,
 				B8591DD12A37907A006049A4 /* CoreDataService.swift */,
 				B8591DD22A37907A006049A4 /* FirebaseService.swift */,
+				B8B1A07D2A3F6C18005D2B7C /* AlertService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				B8591DC52A379068006049A4 /* TabBarController.swift in Sources */,
 				B8591DE32A37908E006049A4 /* Identifiers.swift in Sources */,
 				B8591DE42A37908E006049A4 /* TabManager.swift in Sources */,
+				B8B1A07E2A3F6C18005D2B7C /* AlertService.swift in Sources */,
 				B8591DDD2A379082006049A4 /* ProductsListViewController.swift in Sources */,
 				B8591DDE2A379082006049A4 /* Product.swift in Sources */,
 				B822E2162A39C90900285E7E /* SectionNames.swift in Sources */,
