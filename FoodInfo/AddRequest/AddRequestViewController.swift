@@ -105,7 +105,7 @@ class AddRequestViewController: UIViewController {
     @objc private func sendButtonDidTap() {
         ingredientsTextView.endEditing(true)
         if codeTextField.text?.isEmpty ?? true || titleTextField.text?.isEmpty ?? true || ingredientsTextView.text?.isEmpty ?? true {
-            let alert = AlertService.shared.createWarningAlert(title: "Ошибка", message: "Поля ввода не могут быть пустыми")
+            let alert = AlertBuilder.shared.createWarningAlert(title: "Ошибка", message: "Поля ввода не могут быть пустыми")
             self.present(alert, animated: true)
         } else {
             presenter.addProductRequest(code: codeTextField.text, title: titleTextField.text, ingredients: ingredientsTextView.text) { [weak self] in

@@ -11,7 +11,6 @@ protocol CoreDataServiceProtocol: AnyObject {
     
     func fetchCategory() throws -> [DBCategoryManagedObject]
     func save(block: @escaping (NSManagedObjectContext) throws -> Void)
-    func clearData()
     func deleteObjects(from categoryName: String)
     var persistentContainer: NSPersistentContainer { get }
 }
@@ -60,24 +59,7 @@ final class CoreDataService: CoreDataServiceProtocol {
         do {
             try viewContext.save()
         } catch {
-            //Handle error
-        }
-    }
-    
-    func clearData() {
-        let backgroundContext = persistentContainer.newBackgroundContext()
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "DBCategoryManagedObject")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        deleteRequest.resultType = .resultTypeObjectIDs
-        backgroundContext.perform {
-            do {
-                let batchDelete = try backgroundContext.execute(deleteRequest) as? NSBatchDeleteResult
-                guard let deleteResult = batchDelete?.result as? [NSManagedObjectID] else { return }
-                let deletedObjects: [AnyHashable: Any] = [ NSDeletedObjectsKey: deleteResult]
-                NSManagedObjectContext.mergeChanges(fromRemoteContextSave: deletedObjects, into: [backgroundContext])
-            } catch {
-                print(error)
-            }
+            print(error)
         }
     }
 }

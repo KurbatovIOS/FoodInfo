@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class CategoriesViewController: UIViewController {
     
     // MARK: UI
     private lazy var categoriesTableView: UITableView = {
@@ -20,11 +20,11 @@ class ProfileViewController: UIViewController {
         return tableView
     }()
     
-    private var presenter: ProfilePresenterProtocol
+    private var presenter: CategoriesPresenterProtocol
     private var products: Set<String> = []
     private var sections: [[String]] = Array(repeating: [], count: 3)
     
-    init(presenter: ProfilePresenterProtocol) {
+    init(presenter: CategoriesPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -69,11 +69,6 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupHeader(for section: Int) -> UIView {
-//        let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width - 40, height: 70))
-//        backgroundView.backgroundColor = .systemBackground
-//        backgroundView.layer.cornerRadius = 10
-//        backgroundView.clipsToBounds = true
-        
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width - 40, height: 70))
         headerView.layer.cornerRadius = 10
         headerView.clipsToBounds = true
@@ -94,7 +89,6 @@ class ProfileViewController: UIViewController {
         clearButton.addTarget(self, action: #selector(clearButtonDidTap), for: .touchUpInside)
         clearButton.tintColor = .white
         
-        //backgroundView.addSubview(headerView)
         headerView.addSubview(clearButton)
         headerView.addSubview(addButton)
         headerView.addSubview(label)
@@ -102,18 +96,17 @@ class ProfileViewController: UIViewController {
         switch section {
         case 0:
             label.text = "Любимые"
-            headerView.backgroundColor = .systemGreen//.withAlphaComponent(0.8)
+            headerView.backgroundColor = .systemGreen
         case 1:
             label.text = "Запрещенные"
-            headerView.backgroundColor = .systemRed//.withAlphaComponent(0.8)
+            headerView.backgroundColor = .systemRed
         case 2:
             label.text = "Нежелательные"
-            headerView.backgroundColor = .systemOrange//.withAlphaComponent(0.8)
+            headerView.backgroundColor = .systemOrange
         default:
              break
         }
         return headerView
-        //return backgroundView
     }
     
     @objc private func addToSectionDidTap(sender: UIButton) {
@@ -137,6 +130,7 @@ class ProfileViewController: UIViewController {
             let sectionName = presenter.getCategoryName(sectionTag)
             let newSection = presenter.addProductToSection(productName, category, sectionName)
             sections[sectionTag] = newSection
+            products.insert(productName)
             categoriesTableView.reloadData()
         }
     }
@@ -149,7 +143,7 @@ class ProfileViewController: UIViewController {
 }
 
 //MARK: - Extension
-extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].count
     }

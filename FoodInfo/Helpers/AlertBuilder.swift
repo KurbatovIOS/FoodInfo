@@ -1,5 +1,5 @@
 //
-//  AlertService.swift
+//  AlertBuilder.swift
 //  FoodInfo
 //
 //  Created by Kurbatov Artem on 18.06.2023.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class AlertService {
+class AlertBuilder {
     
-    static let shared = AlertService()
+    static let shared = AlertBuilder()
     
     private init() {}
     

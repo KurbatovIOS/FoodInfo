@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ProfilePresenterProtocol {
+protocol CategoriesPresenterProtocol {
     func addProductToSection(_ prodocut: String, _ section: [String], _ sectionName: String) -> [String]
     func loadCategories() -> [[String]]
     func clearCategory(_ categoryTag: Int)
@@ -15,7 +15,7 @@ protocol ProfilePresenterProtocol {
     func getCategoryName(_ categoryTag: Int) -> String
 }
 
-class ProfilePresenter: ProfilePresenterProtocol {
+class CategoriesPresenter: CategoriesPresenterProtocol {
     
     private let coreDataService: CategoryServiceProtocol
     

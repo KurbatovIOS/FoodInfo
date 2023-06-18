@@ -218,7 +218,7 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     @objc private func searchButtonDidTap() {
         view.endEditing(true)
         guard let code = codeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !code.isEmpty else {
-            let alert = AlertService.shared.createWarningAlert(title: "Ошибка", message: "Поле ввода не может быть пустым")
+            let alert = AlertBuilder.shared.createWarningAlert(title: "Ошибка", message: "Поле ввода не может быть пустым")
             self.present(alert, animated: true)
             return
         }

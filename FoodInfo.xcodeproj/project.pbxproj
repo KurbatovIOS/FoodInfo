@@ -19,8 +19,8 @@
 		B8591DC52A379068006049A4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC42A379068006049A4 /* TabBarController.swift */; };
 		B8591DD32A37907A006049A4 /* ScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC72A37907A006049A4 /* ScanerViewController.swift */; };
 		B8591DD42A37907A006049A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DC92A37907A006049A4 /* DetailsViewController.swift */; };
-		B8591DD52A37907A006049A4 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DCC2A37907A006049A4 /* ProfilePresenter.swift */; };
-		B8591DD62A37907A006049A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DCF2A37907A006049A4 /* ProfileViewController.swift */; };
+		B8591DD52A37907A006049A4 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DCC2A37907A006049A4 /* CategoriesPresenter.swift */; };
+		B8591DD62A37907A006049A4 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DCF2A37907A006049A4 /* CategoriesViewController.swift */; };
 		B8591DD72A37907A006049A4 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DD12A37907A006049A4 /* CoreDataService.swift */; };
 		B8591DD82A37907A006049A4 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DD22A37907A006049A4 /* FirebaseService.swift */; };
 		B8591DDD2A379082006049A4 /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DDA2A379082006049A4 /* ProductsListViewController.swift */; };
@@ -28,7 +28,8 @@
 		B8591DDF2A379082006049A4 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DDC2A379082006049A4 /* ProductCollectionViewCell.swift */; };
 		B8591DE32A37908E006049A4 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DE12A37908E006049A4 /* Identifiers.swift */; };
 		B8591DE42A37908E006049A4 /* TabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8591DE22A37908E006049A4 /* TabManager.swift */; };
-		B8B1A07E2A3F6C18005D2B7C /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B1A07D2A3F6C18005D2B7C /* AlertService.swift */; };
+		B8B1A07E2A3F6C18005D2B7C /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B1A07D2A3F6C18005D2B7C /* AlertBuilder.swift */; };
+		B8B1A0802A3F7EAC005D2B7C /* PresenterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B1A07F2A3F7EAC005D2B7C /* PresenterAssembler.swift */; };
 		B8C1B2DC2A387D6E00ECA3F9 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DB2A387D6E00ECA3F9 /* ProductPresenter.swift */; };
 		B8C1B2DE2A3897D300ECA3F9 /* AddRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DD2A3897D300ECA3F9 /* AddRequestPresenter.swift */; };
 		B8C1B2E02A38988E00ECA3F9 /* ScanerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C1B2DF2A38988E00ECA3F9 /* ScanerPresenter.swift */; };
@@ -53,8 +54,8 @@
 		B8591DC42A379068006049A4 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8591DC72A37907A006049A4 /* ScanerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanerViewController.swift; sourceTree = "<group>"; };
 		B8591DC92A37907A006049A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		B8591DCC2A37907A006049A4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		B8591DCF2A37907A006049A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B8591DCC2A37907A006049A4 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		B8591DCF2A37907A006049A4 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		B8591DD12A37907A006049A4 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		B8591DD22A37907A006049A4 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B8591DDA2A379082006049A4 /* ProductsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +64,8 @@
 		B8591DE12A37908E006049A4 /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		B8591DE22A37908E006049A4 /* TabManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabManager.swift; sourceTree = "<group>"; };
 		B8591DE52A3790C5006049A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8B1A07D2A3F6C18005D2B7C /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		B8B1A07D2A3F6C18005D2B7C /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		B8B1A07F2A3F7EAC005D2B7C /* PresenterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterAssembler.swift; sourceTree = "<group>"; };
 		B8C1B2DB2A387D6E00ECA3F9 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
 		B8C1B2DD2A3897D300ECA3F9 /* AddRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestPresenter.swift; sourceTree = "<group>"; };
 		B8C1B2DF2A38988E00ECA3F9 /* ScanerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanerPresenter.swift; sourceTree = "<group>"; };
@@ -127,7 +129,7 @@
 				B8591DC82A37907A006049A4 /* Details */,
 				B8591DC62A37907A006049A4 /* Scaner */,
 				B8591DBF2A378FEC006049A4 /* AddRequest */,
-				B8591DCA2A37907A006049A4 /* Profile */,
+				B8591DCA2A37907A006049A4 /* Categories */,
 				B8591DD02A37907A006049A4 /* Services */,
 				B8591DE02A37908E006049A4 /* Helpers */,
 				B8138D212A37895F0012F56C /* Assets.xcassets */,
@@ -166,35 +168,27 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
-		B8591DCA2A37907A006049A4 /* Profile */ = {
+		B8591DCA2A37907A006049A4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				B8591DCE2A37907A006049A4 /* Views */,
 				B8591DCB2A37907A006049A4 /* Presenter */,
-				B8591DCD2A37907A006049A4 /* Models */,
 			);
-			path = Profile;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		B8591DCB2A37907A006049A4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B8591DCC2A37907A006049A4 /* ProfilePresenter.swift */,
+				B8591DCC2A37907A006049A4 /* CategoriesPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		B8591DCD2A37907A006049A4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		B8591DCE2A37907A006049A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B8591DCF2A37907A006049A4 /* ProfileViewController.swift */,
+				B8591DCF2A37907A006049A4 /* CategoriesViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,7 +199,6 @@
 				B822E2132A39BED700285E7E /* CategoryService.swift */,
 				B8591DD12A37907A006049A4 /* CoreDataService.swift */,
 				B8591DD22A37907A006049A4 /* FirebaseService.swift */,
-				B8B1A07D2A3F6C18005D2B7C /* AlertService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -223,9 +216,11 @@
 		B8591DE02A37908E006049A4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B8B1A07D2A3F6C18005D2B7C /* AlertBuilder.swift */,
 				B8591DE12A37908E006049A4 /* Identifiers.swift */,
 				B8591DE22A37908E006049A4 /* TabManager.swift */,
 				B822E2152A39C90900285E7E /* SectionNames.swift */,
+				B8B1A07F2A3F7EAC005D2B7C /* PresenterAssembler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -371,12 +366,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8591DD72A37907A006049A4 /* CoreDataService.swift in Sources */,
+				B8B1A0802A3F7EAC005D2B7C /* PresenterAssembler.swift in Sources */,
 				B8138D192A37895F0012F56C /* AppDelegate.swift in Sources */,
 				B8591DC12A378FEC006049A4 /* AddRequestViewController.swift in Sources */,
 				B8591DC52A379068006049A4 /* TabBarController.swift in Sources */,
 				B8591DE32A37908E006049A4 /* Identifiers.swift in Sources */,
 				B8591DE42A37908E006049A4 /* TabManager.swift in Sources */,
-				B8B1A07E2A3F6C18005D2B7C /* AlertService.swift in Sources */,
+				B8B1A07E2A3F6C18005D2B7C /* AlertBuilder.swift in Sources */,
 				B8591DDD2A379082006049A4 /* ProductsListViewController.swift in Sources */,
 				B8591DDE2A379082006049A4 /* Product.swift in Sources */,
 				B822E2162A39C90900285E7E /* SectionNames.swift in Sources */,
@@ -389,9 +385,9 @@
 				B822E2182A3A27CB00285E7E /* DetailPresenter.swift in Sources */,
 				B8591DD42A37907A006049A4 /* DetailsViewController.swift in Sources */,
 				B8C1B2E02A38988E00ECA3F9 /* ScanerPresenter.swift in Sources */,
-				B8591DD62A37907A006049A4 /* ProfileViewController.swift in Sources */,
+				B8591DD62A37907A006049A4 /* CategoriesViewController.swift in Sources */,
 				B8C1B2DE2A3897D300ECA3F9 /* AddRequestPresenter.swift in Sources */,
-				B8591DD52A37907A006049A4 /* ProfilePresenter.swift in Sources */,
+				B8591DD52A37907A006049A4 /* CategoriesPresenter.swift in Sources */,
 				B822E2142A39BED700285E7E /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
