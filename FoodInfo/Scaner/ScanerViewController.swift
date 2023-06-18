@@ -166,9 +166,7 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     func failed() {
-        let alert = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
+        presenter.showWarningAlert(title: "Сканирование не поддерживается", message: "Ваше устройство не поддерживает сканирование кодов. Пожалуйста, используйте устройство с камерой", sourceVC: self)
         captureSession = nil
     }
     
@@ -223,8 +221,8 @@ class ScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     @objc private func searchButtonDidTap() {
         view.endEditing(true)
-        guard let code = codeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-            // TODO: Show Alert
+        guard let code = codeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !code.isEmpty else {
+            presenter.showWarningAlert(title: "Ошибка", message: "Поле ввода не может быть пустым", sourceVC: self)
             return
         }
         presenter.findProduct(with: code)

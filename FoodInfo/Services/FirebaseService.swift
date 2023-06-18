@@ -17,7 +17,6 @@ protocol FirebaseServiceProtocol {
     func sendAddProductRequest(code: String, title: String, ingredients: String)
 }
 
-
 class FirebaseService: FirebaseServiceProtocol {
     
     static let shared: FirebaseServiceProtocol = FirebaseService()
