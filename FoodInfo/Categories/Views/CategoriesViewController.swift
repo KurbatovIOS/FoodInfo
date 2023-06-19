@@ -137,6 +137,7 @@ class CategoriesViewController: UIViewController {
     
     @objc private func clearButtonDidTap(sender: UIButton) {
         sections[sender.tag].removeAll()
+        products.removeAll()
         presenter.clearCategory(sender.tag)
         categoriesTableView.reloadData()
     }
@@ -169,6 +170,7 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Удалить") { _, _, complition in
             self.presenter.deleteProduct(self.sections[indexPath.section][indexPath.row])
+            self.products.remove(self.sections[indexPath.section][indexPath.row])
             self.sections[indexPath.section].remove(at: indexPath.row)
             self.categoriesTableView.reloadData()
             complition(true)
