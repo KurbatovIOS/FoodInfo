@@ -31,7 +31,7 @@ class DetailsPresenter: DetailsPresenterProtocol {
         let ingredients = text.split(separator: ",")
         var mutableAttributedString = NSMutableAttributedString.init(string: text)
         for ingredient in ingredients {
-            defineColor(of: String(ingredient).lowercased(), in: text, &mutableAttributedString)
+            defineColor(of: String(ingredient).lowercased(), in: text.lowercased(), &mutableAttributedString)
         }
         return mutableAttributedString
     }
@@ -52,6 +52,7 @@ class DetailsPresenter: DetailsPresenterProtocol {
                 default:
                     break
                 }
+                            
                 mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
                 break outerloop
             }
